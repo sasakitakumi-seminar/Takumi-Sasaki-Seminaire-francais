@@ -1,19 +1,19 @@
-/* style.css の先頭に追加 */
-:root {
-  --navy: #1a237e;
-  --blue: #1565c0;
-  --red: #c62828;
-  --gold: #ffd600;
-  --light-bg: #f8f9fa;
-  --dark-text: #212121;
-  --gray-border: #e0e0e0;
-}
-
 /* 全体のリセットと基本設定 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* メインカラー（アクセンチュア風の鮮やかさ） */
+:root {
+  --navy: #1a237e;        /* 濃い紺（信頼感・知的さ） */
+  --blue: #1565c0;        /* 明るい青（コンサル・テック感） */
+  --red: #c62828;         /* フランスの赤（情熱・ブティック感） */
+  --gold: #ffd600;        /* アクセントの金（高級感） */
+  --light-bg: #f8f9fa;    /* 明るい背景 */
+  --dark-text: #212121;   /* 濃いテキスト */
+  --gray-border: #e0e0e0; /* 境界線用グレー */
 }
 
 body {
