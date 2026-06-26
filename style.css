@@ -66,8 +66,8 @@ nav {
   white-space: nowrap;
 }
 
-/* ここから nav-menu に変更 */
-.nav-menu ul {
+/* ここから .nav-links を .nav-menu に置き換え */
+.nav-menu {
   display: flex;
   list-style: none;
   margin: 0;
