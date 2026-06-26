@@ -1,2 +1,33 @@
 # Takumi-Sasaki-Seminaire-francais
 Official site of our seminer on French culture, art, and society 
+
+# フランス社会文化芸術ゼミナール 公式サイト
+
+このリポジトリは、フランスの社会・文化・芸術を研究するゼミナールの公式ウェブサイトです。
+
+## サイトの目的
+
+- ゼミの活動内容や研究テーマを発信する
+- メンバー紹介や連絡先を掲載する
+- フランスの社会文化芸術に関する情報を共有する
+
+## 技術スタック
+
+- HTML
+- CSS
+- JavaScript（必要に応じて）
+
+## 公開方法
+
+このサイトは GitHub Pages で公開されています。
+
+公開URL: `https://あなたのユーザー名.github.io/seminar-website`
+
+## ライセンス
+
+このプロジェクトは MIT License の下で公開されています。詳細は [LICENSE](LICENSE) ファイルをご覧ください。
+
+## 連絡先
+
+- ゼミ代表: example@university.ac.jp
+- GitHub Issues: バグ報告や機能要望はこちらから
