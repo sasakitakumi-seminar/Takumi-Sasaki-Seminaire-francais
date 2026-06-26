@@ -82,7 +82,10 @@ nav {
 /* ヒーローセクション（ブティック入り口風） */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506905925346-21bda4d1df45') center/cover no-repeat;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    /* フランス国旗風のグラデーション */
+    linear-gradient(90deg, #0055A4 0%, #0055A4 33%, #FFFFFF 33%, #FFFFFF 66%, #EF4135 66%, #EF4135 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,6 +146,9 @@ nav {
     transform: translateY(0);
   }
 }
+.btn-icon {
+  margin-right: 0.5rem;
+}
 
 /* 各セクション */
 .section {
@@ -152,6 +158,11 @@ nav {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInSection 1s ease-out forwards;
+}
+
+/* Aboutセクションだけ上余白を増やす */
+#about {
+  padding-top: 7rem; /* 必要に応じて調整 */
 }
 
 .section:nth-child(odd) {
