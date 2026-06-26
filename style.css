@@ -23,37 +23,28 @@ body {
   background-color: var(--light-bg);
 }
 
-/* ヘッダー（ナビゲーション） */
+/* ヘッダー全体 */
 header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 1rem 0;
 }
 
-header .container {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  height: 70px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* 左上ロゴ */
 .logo {
   display: flex;
   align-items: center;
@@ -63,29 +54,25 @@ nav {
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
-
 .logo:hover {
   color: #9a031e;
 }
-
 .logo-icon {
   font-size: 1.5rem;
   margin-right: 0.5rem;
 }
-
 .logo-text {
   white-space: nowrap;
 }
 
-/* ここから .nav-links を .nav-menu に置き換え */
-.nav-menu {
+/* 右上メニュー（PC表示） */
+.nav-menu ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 2rem;
 }
-
 .nav-menu a {
   text-decoration: none;
   color: #2c3e50;
@@ -93,28 +80,29 @@ nav {
   transition: color 0.3s ease;
   white-space: nowrap;
 }
-
 .nav-menu a:hover {
   color: #9a031e;
 }
 
-/* ハンバーガーメニュー（スマホ用） */
+/* ハンバーガーボタン（スマホ用） */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 4px;
+  width: 30px;
+  height: 20px;
+  justify-content: space-between;
 }
-
 .hamburger span {
   display: block;
-  width: 25px;
   height: 3px;
-  background: #2c3e50;
-  transition: 0.3s;
+  width: 100%;
+  background-color: #2c3e50;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-/* スマホ用レスポンシブ */
+/* スマホ表示（768px以下） */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -123,7 +111,7 @@ nav {
   .nav-menu ul {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 70px; /* headerの高さと同じにすると隙間がなくなる */
     right: 0;
     background: white;
     width: 200px;
