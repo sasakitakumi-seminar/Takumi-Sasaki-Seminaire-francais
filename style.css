@@ -9,7 +9,7 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f8f4f0; /* クリーム系の背景に変更 */
+  background-color: #f8f4f0; /* クリーム系の背景 */
 }
 
 /* ヘッダー（ナビゲーション） */
@@ -61,7 +61,7 @@ nav {
 }
 
 .nav-links li a:hover {
-  color: #9a031e; /* ワインレッドに変更 */
+  color: #9a031e; /* ワインレッド */
 }
 
 /* ハンバーガーメニュー（スマホ用） */
@@ -118,7 +118,7 @@ nav {
 
 .btn {
   display: inline-block;
-  background: #9a031e; /* ワインレッドに変更 */
+  background: #9a031e; /* ワインレッド */
   color: #fff;
   padding: 0.8rem 2rem;
   text-decoration: none;
@@ -231,7 +231,7 @@ nav {
   background: #fff;
   margin-bottom: 1rem;
   padding: 1rem;
-  border-left: 4px solid #d4af37; /* ゴールド系に変更 */
+  border-left: 4px solid #d4af37; /* ゴールド系 */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
