@@ -353,3 +353,102 @@ footer {
   }
 }
 }
+
+/* ここから下にタイムラインのスタイルを追加 */
+
+/* ゼミ年代記（タイムライン） */
+.timeline-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-section h2 {
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 中央の縦線（羊皮紙の背） */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gold);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+/* マーカー（櫛のような小さい球） */
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: var(--red);
+  border: 3px solid white;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: calc(50% - 2rem);
+  position: relative;
+}
+
+/* 左右交互に配置 */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.timeline-content h3 {
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.timeline-content p {
+  color: var(--dark-text);
+  line-height: 1.5;
+}
+
+/* スマホでは縦線を左寄せに */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-marker {
+    left: 20px;
+  }
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+    margin-right: 0 !important;
+  }
+}
