@@ -1,11 +1,9 @@
-/* カスタムプロパティ（アクセンチュア風＋フランス色） */
+/* カスタムプロパティ（赤・白・青・黒） */
 :root {
-  --navy: #1a237e;        /* 濃い紺（信頼感・知的さ） */
-  --blue: #1565c0;        /* 明るい青（コンサル・テック感） */
-  --red: #c62828;         /* フランスの赤（情熱・ブティック感） */
-  --gold: #ffd600;        /* アクセントの金（高級感） */
-  --light-bg: #f8f9fa;    /* 明るい背景 */
-  --dark-text: #212121;   /* 濃いテキスト */
+  --red: #c62828;         /* フランスの赤 */
+  --blue: #1565c0;        /* フランスの青 */
+  --light-bg: #ffffff;    /* 白背景 */
+  --dark-text: #212121;   /* 黒テキスト */
   --gray-border: #e0e0e0; /* 境界線用グレー */
 }
 
@@ -21,6 +19,20 @@ body {
   line-height: 1.6;
   color: var(--dark-text);
   background-color: var(--light-bg);
+}
+
+/* 英語フォントをTimes New Romanに統一 */
+h1, h2, h3,
+.nav-menu a,
+.btn,
+.logo-text,
+.timeline-content h3,
+.timeline-content p,
+.card h3,
+.card p,
+.values h3,
+.values li {
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ヘッダー全体 */
@@ -44,22 +56,18 @@ header {
   height: 70px;
 }
 
-/* 左上ロゴ */
+/* 左上ロゴ（国旗なし・テキストのみ） */
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--navy);
+  color: var(--dark-text);
   font-weight: 600;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 .logo:hover {
   color: var(--red);
-}
-.logo-icon {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
 }
 .logo-text {
   white-space: nowrap;
@@ -75,7 +83,7 @@ header {
 }
 .nav-menu a {
   text-decoration: none;
-  color: var(--navy);
+  color: var(--dark-text);
   font-weight: 500;
   transition: color 0.3s ease;
   white-space: nowrap;
@@ -97,7 +105,7 @@ header {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: var(--navy);
+  background-color: var(--dark-text);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -124,7 +132,7 @@ header {
   }
 }
 
-/* ヒーローセクション（ブティック風フレーム） */
+/* ヒーローセクション（白ベース・枠線なし） */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -139,7 +147,6 @@ header {
   padding: 3rem;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border: 2px solid var(--gold);
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
@@ -147,8 +154,22 @@ header {
 
 .hero-content h1 {
   font-size: 2.5rem;
-  color: var(--navy);
+  color: var(--dark-text);
   margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content p {
@@ -170,10 +191,6 @@ header {
 }
 .btn:hover {
   background: var(--blue);
-}
-.btn-icon {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
 }
 
 /* 各セクション */
@@ -209,7 +226,7 @@ header {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--navy);
+  color: var(--dark-text);
 }
 
 .section p {
@@ -239,7 +256,7 @@ header {
 }
 
 .card h3 {
-  color: var(--navy);
+  color: var(--dark-text);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -255,7 +272,7 @@ header {
 }
 
 .values h3 {
-  color: var(--navy);
+  color: var(--dark-text);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -268,7 +285,7 @@ header {
   background: #fff;
   margin-bottom: 1rem;
   padding: 1rem;
-  border-left: 4px solid var(--gold);
+  border-left: 4px solid var(--blue);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
@@ -278,15 +295,71 @@ header {
 }
 
 .values strong {
-  color: var(--navy);
+  color: var(--dark-text);
 }
 
 /* フッター */
 footer {
-  background: var(--navy);
+  background: var(--dark-text);
   color: #fff;
   text-align: center;
   padding: 2rem;
+}
+
+/* スマホ用スタイル */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-menu ul.active {
+    display: flex;
+  }
+
+  .nav-menu ul li {
+    margin: 0.5rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+  }
+
+  .values li {
+    padding: 0.8rem;
+  }
 }
 
 /* ゼミ年代記（タイムライン） */
@@ -298,7 +371,7 @@ footer {
 
 .timeline-section h2 {
   font-size: 2rem;
-  color: var(--navy);
+  color: var(--dark-text);
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -309,15 +382,15 @@ footer {
   margin: 0 auto;
 }
 
-/* 中央の縦線（羊皮紙の背） */
+/* 中央の縦線（黒に変更） */
 .timeline::before {
   content: '';
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 4px;
-  background: var(--gold);
+  width: 3px;
+  background: var(--dark-text);
   transform: translateX(-50%);
 }
 
@@ -326,7 +399,7 @@ footer {
   margin-bottom: 3rem;
 }
 
-/* マーカー（櫛のような小さい球） */
+/* マーカー（赤い球） */
 .timeline-marker {
   position: absolute;
   left: 50%;
@@ -361,7 +434,7 @@ footer {
 }
 
 .timeline-content h3 {
-  color: var(--navy);
+  color: var(--dark-text);
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
@@ -384,30 +457,4 @@ footer {
     margin-left: 60px !important;
     margin-right: 0 !important;
   }
-}
-
-/* スマホ全体の調整 */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .section {
-    padding: 3rem 1rem;
-  }
-  .section h2 {
-    font-size: 1.5rem;
-  }
-  .section p {
-    font-size: 1rem;
-  }
-  .mission-vision {
-    flex-direction: column;
-  }
-  .values li {
-    padding: 0.8rem;
-  }
-}
 }
