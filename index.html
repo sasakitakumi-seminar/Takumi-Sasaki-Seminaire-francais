@@ -10,8 +10,8 @@
   <!-- ヘッダー（固定） -->
   <header>
     <div class="container">
-      <!-- 左上ロゴ（トップへ戻るリンク） -->
-      <a href="#" class="logo">
+      <!-- 左上ロゴ（トップへ戻る） -->
+      <a href="#hero" class="logo">
         <span class="logo-icon">🇫🇷</span>
         <span class="logo-text">佐々木匠ゼミナール</span>
       </a>
@@ -20,9 +20,11 @@
       <nav class="nav-menu">
         <ul>
           <li><a href="#about">About us</a></li>
-          <li><a href="#professor">Professor profile</a></li>
-          <li><a href="#exam">Entrance Exam</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#professor">Our professor</a></li>
+          <li><a href="#explore">Our explore</a></li>
+          <li><a href="#exam">Entrance exam</a></li>
+          <li><a href="#history">Our history</a></li>
+          <li><a href="#contact">Contact us</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -34,11 +36,11 @@
   </header>
 
   <!-- ヒーローセクション（トップ） -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="hero-frame">
       <div class="hero-content">
-        <h1>佐々木匠ゼミナール</h1>
-        <p>フランスの社会・文化・芸術を深く探求する、ブティックのような研究空間。</p>
+        <h1 id="hero-title">Culture, Art, Societe, et Moi.</h1>
+        <p id="hero-subtitle">文化、芸術、社会。<br>そして、私―――。</p>
         <a href="#about" class="btn">
           <span class="btn-icon">🇫🇷</span>
           Entrer
@@ -47,69 +49,103 @@
     </div>
   </section>
 
-  <!-- ここに About / Professor / Exam / Contact / Timeline などのセクションを続けて配置 -->
+  <!-- About us -->
   <section id="about" class="section">
-  <h2>About</h2>
-  <div class="mission-vision">
-    <div class="card">
-      <h3>Mission</h3>
-      <p>経営学部の中でも、文化・社会・芸術に興味のある人が、安心して研究に没頭できる「ブティックのような研究空間」を作ること。</p>
-    </div>
-    <div class="card">
-      <h3>Vision</h3>
-      <p>気を遣いすぎず気軽に意見も話せ、話し合い・意見交換が活発なゼミ。授業以外の関わりも豊富で、仲が良く、能動的に活動するゼミ。卒業までにフランスに行き、実績と伝統を築く。</p>
-    </div>
-  </div>
-  <div class="values">
-    <h3>Our Values</h3>
-    <ul>
-      <li><strong>積極的な発言</strong>：意見を出し、大勢の前で発言に慣れる</li>
-      <li><strong>能動的な参加</strong>：受け身ではなく、自ら考え・行動する</li>
-      <li><strong>交流の深化</strong>：日常会話・イベント・フィールドスタディを通じて距離を縮める</li>
-      <li><strong>心理的安全性</strong>：誰でも最初に発言しやすい雰囲気づくり</li>
-      <li><strong>実践と実績</strong>：フランスへのフィールドスタディ、就活GDを意識した練習など</li>
-    </ul>
-  </div>
-</section>
+    <h2>About us</h2>
+    <p>私たちは2025年に設立された創設から間もないゼミナールです。<br>
+       フランスの文化、芸術、社会を研究しています。<br>
+       フランスの文化、芸術、社会を経営学の観点から研究する学生もいます。</p>
 
-  <section id="members" class="section">
-    <h2>Our profesor</h2>
-    <p>教員の紹介をここに掲載します。</p>
-    
+    <div class="mission-vision">
+      <div class="card">
+        <h3>Our mission</h3>
+        <p>文化・社会・芸術に興味のある学生が、研究に没頭できる場を提供する。</p>
+      </div>
+      <div class="card">
+        <h3>Our vision</h3>
+        <p>フランスの文化・芸術・社会を多角的に理解し、経営学の視点から新しい価値を生み出す。</p>
+      </div>
+    </div>
+
+    <div class="values">
+      <h3>Our value</h3>
+      <ul>
+        <li><strong>好奇心</strong> ― 知らないことへの興味を大切にする</li>
+        <li><strong>対話</strong> ― 異なる視点を尊重し、議論を通じて学ぶ</li>
+        <li><strong>自律性</strong> ― 自分でテーマを決め、探究する力を育てる</li>
+      </ul>
+    </div>
   </section>
-<section id="timeline" class="timeline-section">
-  <h2>ゼミ年代記</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <h3>2024年 春</h3>
-        <p>ゼミ設立。文化・社会・芸術をテーマにした研究活動を開始。</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <h3>2024年 秋</h3>
-        <p>学内スポーツ大会に初出場。二回戦進出。</p>
-      </div>
-    </div>
-    <!-- 以降、年代を追加 -->
-  </div>
 
-</section>
+  <!-- Our professor -->
+  <section id="professor" class="section">
+    <h2>Our professor</h2>
+    <p>佐々木 匠 教授のプロフィール・研究テーマ・メッセージなど。</p>
+  </section>
+
+  <!-- Our explore -->
+  <section id="explore" class="section">
+    <h2>Our explore</h2>
+    <p>これまでの活動（プレゼン大会、スポーツ大会、交流会など）の紹介。</p>
+  </section>
+
+  <!-- Entrance exam -->
+  <section id="exam" class="section">
+    <h2>Entrance exam</h2>
+    <p>入室試験の概要・スケジュール・準備方法など。</p>
+  </section>
+
+  <!-- Our history（ゼミ年代記） -->
+  <section id="history" class="timeline-section">
+    <h2>Our history</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>2025年 春</h3>
+          <p>ゼミ一期生入室</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>2025年 秋</h3>
+          <p>ゼミ二期生入室</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>2025年 秋</h3>
+          <p>スポーツ大会初出場</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>2025年 秋</h3>
+          <p>各学年交流会実施</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>次の歴史を作るのはあなたです</h3>
+          <p>ゼミへの参加を検討している学生へ向けたメッセージ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact us -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>お問い合わせはこちらから。</p>
+    <h2>Contact us</h2>
+    <p>連絡先・公式インスタグラム・アクセス情報など。</p>
   </section>
-  <script src="script.js"></script>
-</body>
-</html>
 
-
-  
+  <!-- フッター -->
   <footer>
-    <p>&copy; 2025 佐々木匠ゼミナール</p>
+    <p>&copy; 2025 佐々木匠ゼミナール All rights reserved </p>
   </footer>
 
   <script src="script.js"></script>
