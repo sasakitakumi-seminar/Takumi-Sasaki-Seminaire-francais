@@ -112,6 +112,14 @@ header {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* 追加：文字を白い縁取りで囲む */
+.hero.flag-bg .hero-title,
+.hero.flag-bg .hero-subtitle {
+  -webkit-text-stroke: 0.5px #fff; /* スマホ対応 */
+  text-stroke: 0.5px #fff;
+  paint-order: stroke fill; /* 縁取りの上に文字色を重ねる */
+}
+
 /* 白背景部分だけ少し暗くするオーバーレイ（任意） */
 .hero.flag-bg::before {
   content: '';
@@ -126,12 +134,8 @@ header {
 
 .hero-content {
   max-width: 800px;
-  z-index: 2;
+  z-index: 2; /* オーバーレイより上に表示 */
   position: relative;
-  /* ここに追加：白い半透明の背景で文字を保護 */
-  background: rgba(255, 255, 255, 0.15);
-  padding: 2rem;
-  border-radius: 8px;
 }
 
 /* 既存の影も残す（より強くしてもよい） */
