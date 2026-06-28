@@ -16,20 +16,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // スムーズスクロール（ページ内リンク用）
+  // スムーズスクロール（ページ内リンク＋Heroボタン用）
+  function smoothScrollToTarget(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop - 70; // ヘッダー分オフセット
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  // ページ内リンク（#から始まるリンク）に適用
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        // ヘッダーの高さ分だけオフセット（70px）
-        const offsetTop = targetElement.offsetTop - 70;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
-      }
-    });
+    anchor.addEventListener('click', smoothScrollToTarget);
   });
+
+  // HeroセクションのAbout usボタンにも適用（もし別クラスならこちら）
+  const heroBtn = document.querySelector('.hero-btn');
+  if (heroBtn) {
+    heroBtn.addEventListener('click', smoothScrollToTarget);
+  }
 });
