@@ -40,7 +40,7 @@ header {
   width: auto;
 }
 
-/* ハンバーガーメニュー */
+/* ハンバーガーメニュー（PCでは非表示） */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -57,6 +57,7 @@ header {
   transition: 0.3s;
 }
 
+/* ナビゲーションメニュー（PC） */
 .nav-menu ul {
   display: flex;
   list-style: none;
@@ -136,7 +137,7 @@ header {
   background-color: #b71c1c; /* 少し暗い赤 */
 }
 
-/* セクション共通 */
+/* セクション共通（About us, Our principals, Our professor, Our explore, Entrance exam, Seminar history, Contact us） */
 .section {
   padding: 4rem 0;
   border-bottom: 1px solid #e0e0e0; /* 黒い線で区切り */
@@ -218,16 +219,23 @@ header {
   color: #1565c0;
 }
 
-/* スマホ対応 */
+/* スマホ対応（768px以下） */
 @media (max-width: 768px) {
+  /* ヘッダー調整 */
+  .header-container {
+    padding: 0.8rem 1rem; /* スマホでは少し余白を減らす */
+  }
+
+  /* ハンバーガーメニュー表示 */
   .hamburger {
     display: flex;
   }
 
+  /* ナビゲーションメニュー（スマホ） */
   .nav-menu {
     position: fixed;
     top: 70px;
-    right: -100%;
+    right: -100%; /* 画面外に隠す */
     width: 100%;
     height: calc(100vh - 70px);
     background-color: #fff;
@@ -239,7 +247,7 @@ header {
   }
 
   .nav-menu.active {
-    right: 0;
+    right: 0; /* クリックでスライドイン */
   }
 
   .nav-menu ul {
@@ -252,12 +260,27 @@ header {
     padding: 1rem;
   }
 
+  /* ヒーローセクション調整 */
   .hero-title {
-    font-size: 2rem;
+    font-size: 2rem; /* スマホでは少し小さく */
   }
 
+  /* セクション共通調整 */
+  .section {
+    padding: 3rem 0; /* スマホでは上下の余白を少し減らす */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* タイムライン調整 */
   .timeline::before {
-    left: 20px;
+    left: 20px; /* 中央線を左寄せ */
   }
 
   .timeline-item:nth-child(odd) .timeline-content,
@@ -266,6 +289,6 @@ header {
     margin-right: 0;
     padding-left: 2rem;
     padding-right: 0;
-    text-align: left;
+    text-align: left; /* スマホではすべて左揃え */
   }
 }
