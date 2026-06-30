@@ -1,0 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+
+  console.log('hamburger:', hamburger); // ← 追加
+  console.log('navMenu:', navMenu);     // ← 追加
+
+  hamburger.addEventListener('click', function() {
+    console.log('クリックされました'); // ← 追加
+    navMenu.classList.toggle('active');
+  });
+
+  // 以下略
+});
