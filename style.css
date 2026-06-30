@@ -40,21 +40,51 @@ header {
   width: auto;
 }
 
-/* ハンバーガーメニュー（PCでは非表示） */
 .hamburger {
   display: none;
   flex-direction: column;
   background: none;
   border: none;
   cursor: pointer;
+  position: relative; /* 追加：子要素を絶対配置する基準 */
+  width: 25px;        /* 追加：幅を固定 */
+  height: 25px;       /* 追加：高さを固定 */
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
   background-color: #212121;
-  margin: 3px 0;
+  margin: 0;          /* 変更：marginを0に */
   transition: 0.3s;
+  position: absolute; /* 追加：3本線を重ねる */
+  left: 0;
+}
+
+/* 3本線の初期位置 */
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+.hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+/* メニューが開いているとき（active）の×アイコン */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: auto;
+  top: 50%;
 }
 
 /* ナビゲーションメニュー（PC） */
