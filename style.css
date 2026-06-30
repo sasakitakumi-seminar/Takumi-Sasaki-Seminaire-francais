@@ -109,7 +109,7 @@ header {
 .hero.flag-bg .hero-title,
 .hero.flag-bg .hero-subtitle,
 .hero.flag-bg .hero-btn {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
 }
 
 /* 追加：文字を白い縁取りで囲む */
