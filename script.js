@@ -1,9 +1,13 @@
-document.addEventListener('DOMContentLoaded', function(smoothScrollToTarget) {
+document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
 
+  console.log('hamburger:', hamburger);
+  console.log('navMenu:', navMenu);
+
   // ハンバーガーメニューの開閉
   hamburger.addEventListener('click', function() {
+    console.log('クリックされました');
     navMenu.classList.toggle('active');
     hamburger.classList.toggle('active'); // ← バツ印用（必要なら追加）
   });
