@@ -41,9 +41,3 @@ document.addEventListener('DOMContentLoaded', function() {
     heroBtn.addEventListener('click', smoothScrollToTarget);
   }
 });
-
-// HeroセクションのAbout usボタンにも適用（もし別クラスならこちら）
-const heroBtn = document.querySelector('.hero-btn');
-if (heroBtn) {
-  heroBtn.addEventListener('click', smoothScrollToTarget);
-}
