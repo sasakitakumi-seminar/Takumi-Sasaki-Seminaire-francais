@@ -115,8 +115,8 @@ header {
 /* 追加：文字を白い縁取りで囲む */
 .hero.flag-bg .hero-title,
 .hero.flag-bg .hero-subtitle {
-  -webkit-text-stroke: 0.5px #fff; /* スマホ対応 */
-  text-stroke: 0.5px #fff;
+ -webkit-text-stroke: 0.3px #fff; /* 0.5px → 0.3px */
+  text-stroke: 0.3px #fff;
   paint-order: stroke fill; /* 縁取りの上に文字色を重ねる */
 }
 
